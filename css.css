@@ -1,0 +1,106 @@
+/* 🎇 Fondo principal de estrellas */
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(fondo.jpg); /* 🔹 Asegúrate de que el nombre coincide con tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+}
+
+/* 🔹 Ajustes generales */
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p, a, label {
+  margin: 0;
+  padding: 0;
+}
+
+/* 🩵 Contenedor del login (efecto glass) */
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ✨ Título */
+.login-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* 🌙 Inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* 🌠 Botón */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a86af7, #d47eff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(215, 156, 255, 0.6);
+}
+
+/* ✨ Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌌 Efecto de estrellas animadas */
+@keyframes twinkle {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+.stars {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite alternate;
+}
